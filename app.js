@@ -12,6 +12,8 @@ import passport from 'passport';
 import verifyToken from './Middlewares/verifyToken.js';
 import path from 'path';
 
+dbConnection();
+
 const app = express();
 
 // initialize passport
@@ -41,7 +43,7 @@ app.get('/api/users', (req, res) => {
 });
 // Define route for /api/display to serve index.html
 app.get('/api/display', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+	res.sendFile('index.html', { root: './' });
 });
 // app.use('/signup', Router.SignupRouter);
 
