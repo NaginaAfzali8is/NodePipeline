@@ -35,7 +35,7 @@ app.use(verifyToken.verifyTokenSetUser);
 app.use(express.json());
 
 app.get('/', (req, res) => {
-	res.status(status.OK).send({ Message: 'Connected', status: status.OK });
+	res.status(200).json({ Message: 'Connected'});
 });
 
 app.use('/signup', Router.SignupRouter);
