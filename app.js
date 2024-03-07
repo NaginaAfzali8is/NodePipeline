@@ -7,8 +7,8 @@ import helmet from 'helmet';
 import compression from 'compression';
 import passport from 'passport';
 import dbConnection from './Connection/dbConnect.js';
-import Router from './Routes/Router.js';
-import errorHandler from './Middlewares/errorHandler.js';
+// import Router from './Routes/Router.js';
+// import errorHandler from './Middlewares/errorHandler.js';
 import verifyToken from './Middlewares/verifyToken.js';
 
 dbConnection();
@@ -41,14 +41,14 @@ app.get('/api/users', (req, res) => {
 	res.status(200).json({ Message: 'these are users'});
 });
 
-app.use('/signup', Router.SignupRouter);
+// app.use('/signup', Router.SignupRouter);
 
-app.use('/signin', Router.SigninRouter);
+// app.use('/signin', Router.SigninRouter);
 
-app.use('/event', Router.EventRouter);
+// app.use('/event', Router.EventRouter);
 
 // i have implemented it in signup controller like this {next(new Error('Image is required'))}
-app.use(errorHandler);
+// app.use(errorHandler);
 
 const port = process.env.PORT || 5000;
 
