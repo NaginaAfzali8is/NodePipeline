@@ -21,8 +21,7 @@ const verifyTokenSetUser = (req, res, next) => {
 		next();
 	}
 };
-export default verifyTokenSetUser;
 
-// module.exports = {
-// 	verifyTokenSetUser,
-// };
+module.exports = {
+	verifyTokenSetUser,
+};
