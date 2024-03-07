@@ -30,7 +30,7 @@ app.use(
 );
 
 // will decode token from each request in {req.user}
-app.use(verifyToken.verifyToken);
+// app.use(verifyToken.verifyToken);
 
 app.use(express.json());
 
