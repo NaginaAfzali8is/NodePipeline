@@ -12,8 +12,6 @@ import passport from 'passport';
 import verifyToken from './Middlewares/verifyToken.js';
 import path from 'path';
 
-// dbConnection();
-
 const app = express();
 
 // initialize passport
