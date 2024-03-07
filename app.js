@@ -37,6 +37,9 @@ app.use(express.json());
 app.get('/', (req, res) => {
 	res.status(200).json({ Message: 'Connected'});
 });
+app.get('/api/users', (req, res) => {
+	res.status(200).json({ Message: 'these are users'});
+});
 
 app.use('/signup', Router.SignupRouter);
 
