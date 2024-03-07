@@ -10,6 +10,7 @@ import passport from 'passport';
 // import Router from './Routes/Router.js';
 // import errorHandler from './Middlewares/errorHandler.js';
 import verifyToken from './Middlewares/verifyToken.js';
+import path from 'path';
 
 // dbConnection();
 
@@ -40,7 +41,10 @@ app.get('/', (req, res) => {
 app.get('/api/users', (req, res) => {
 	res.status(200).json({ Message: 'these are users'});
 });
-
+// Define route for /api/display to serve index.html
+app.get('/api/display', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
 // app.use('/signup', Router.SignupRouter);
 
 // app.use('/signin', Router.SigninRouter);
