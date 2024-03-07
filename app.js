@@ -6,10 +6,10 @@ import morgan from 'morgan';
 import helmet from 'helmet';
 import compression from 'compression';
 import passport from 'passport';
-import dbConnection from './Connection/dbConnect';
-import Router from './Routes/Router';
-import errorHandler from './Middlewares/errorHandler';
-import verifyToken from './Middlewares/verifyToken';
+import dbConnection from './Connection/dbConnect.js';
+import Router from './Routes/Router.js';
+import errorHandler from './Middlewares/errorHandler.js';
+import verifyToken from './Middlewares/verifyToken.js';
 
 dbConnection();
 
