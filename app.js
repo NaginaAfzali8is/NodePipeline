@@ -9,7 +9,7 @@ import passport from 'passport';
 import dbConnection from './Connection/dbConnect.js';
 // import Router from './Routes/Router.js';
 // import errorHandler from './Middlewares/errorHandler.js';
-import verifyToken from './Middlewares/verifyToken.js';
+// import verifyToken from './Middlewares/verifyToken.js';
 
 dbConnection();
 
